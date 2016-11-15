@@ -6,16 +6,18 @@ import { RouterModule } from '@angular/router'
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import {HeroDetailComponent} from "./hero-detail.component";
 import {HeroService} from "./hero.service";
 import { HeroesComponent } from './heroes/heroes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroDetailComponent,
-    HeroesComponent
+    HeroesComponent,
+    DashboardComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,19 @@ import { HeroesComponent } from './heroes/heroes.component';
       {
         path: 'heroes',
         component: HeroesComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'detail/:id',
+        component: HeroDetailComponent
       }
     ])
   ],
