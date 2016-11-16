@@ -10,7 +10,6 @@ import {Location} from '@angular/common'
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-  @Input()
   hero: Hero;
 
   constructor(
@@ -31,6 +30,10 @@ export class HeroDetailComponent implements OnInit {
 
   goBack(): void{
     this.location.back();
+  }
+  save():void{
+    this.heroService.update(this.hero)
+      .then(() => this.goBack())
   }
 
 }
