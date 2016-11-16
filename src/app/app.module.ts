@@ -11,7 +11,7 @@ import {InMemoryDataService} from "./in-memory-data.service";
 
 import './rxjs-extensions';
 import {TohModule} from "./toh/toh.module";
-import {TohRoutingModule} from "./toh/toh-routing.module";
+//import {TohRoutingModule} from "./toh/toh-routing.module";
 
 
 @NgModule({
@@ -24,9 +24,9 @@ import {TohRoutingModule} from "./toh/toh-routing.module";
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     MaterialModule.forRoot(),
-    AppRoutingModule,
-    TohRoutingModule,
-    TohModule
+    TohModule,
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

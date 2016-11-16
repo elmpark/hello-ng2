@@ -2,8 +2,8 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'toh', pathMatch: 'full'},
-  { path: 'toh', loadChildren: 'toh/toh.module#TohModule'}
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'toh', loadChildren: 'app/toh/toh.module#TohModule'}
 ]
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],

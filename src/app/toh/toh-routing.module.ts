@@ -6,7 +6,7 @@ import {HeroesComponent} from "./heroes/heroes.component";
 
 @NgModule({
   imports: [RouterModule.forChild([
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'dashboard',  component: DashboardComponent },
     { path: 'detail/:id', component: HeroDetailComponent },
     { path: 'heroes',     component: HeroesComponent }
