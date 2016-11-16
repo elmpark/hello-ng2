@@ -27,8 +27,8 @@ var HeroesComponent = (function () {
     HeroesComponent = __decorate([
         core_1.Component({
             selector: 'app-heroes',
-            templateUrl: './heroes.component.html',
-            styleUrls: ['./heroes.component.css']
+            templateUrl: 'heroes.component.html',
+            styleUrls: ['heroes.component.css']
         })
     ], HeroesComponent);
     return HeroesComponent;

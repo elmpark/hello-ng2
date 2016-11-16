@@ -8,8 +8,8 @@ import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-hero-search',
-  templateUrl: './hero-search.component.html',
-  styleUrls: ['./hero-search.component.css'],
+  templateUrl: 'hero-search.component.html',
+  styleUrls: ['hero-search.component.css'],
   providers: [HeroSearchService]
 })
 export class HeroSearchComponent implements OnInit {

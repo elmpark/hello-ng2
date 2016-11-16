@@ -6,24 +6,17 @@ import { MaterialModule } from '@angular/material';
 import {InMemoryWebApiModule} from "angular-in-memory-web-api";
 
 import { AppComponent } from './app.component';
-import {HeroService} from "./hero.service";
-import { HeroesComponent } from './heroes/heroes.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {InMemoryDataService} from "./in-memory-data.service";
-import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 import './rxjs-extensions';
+import {TohModule} from "./toh/toh.module";
+import {TohRoutingModule} from "./toh/toh-routing.module";
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeroesComponent,
-    DashboardComponent,
-    HeroDetailComponent,
-    HeroSearchComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +24,11 @@ import './rxjs-extensions';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     MaterialModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    TohRoutingModule,
+    TohModule
   ],
-  providers: [HeroService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
