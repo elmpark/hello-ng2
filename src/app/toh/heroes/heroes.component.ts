@@ -32,7 +32,7 @@ export class HeroesComponent implements OnInit {
   }
 
   gotoDetail(): void{
-    this.router.navigate(['/toh/detail', this.selectedHero.id]);
+    this.router.navigate(['toh/detail', this.selectedHero.id]);
   }
   add(name: string): void{
     name = name.trim();

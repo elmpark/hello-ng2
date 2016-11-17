@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TohComponent implements OnInit {
 
+  title = 'Tour of heroes';
+
   constructor() { }
 
   ngOnInit() {
