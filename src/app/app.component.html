@@ -1,6 +1,9 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="toh" routerLinkActive="active">Toh</a>
-</nav>
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+
+    <button md-button>
+      <a routerLink="toh" routerLinkActive="active">Toh</a>
+    </button>
+
+</md-toolbar>
 <router-outlet></router-outlet>
-<app-toh></app-toh>

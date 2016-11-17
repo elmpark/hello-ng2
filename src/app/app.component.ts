@@ -9,5 +9,5 @@ import {Component} from '@angular/core';
 
 
 export class AppComponent {
-  title = 'Learn angular2!'
+  title = 'Learn Ng2!'
 }

@@ -6,11 +6,11 @@ import { MaterialModule } from '@angular/material';
 import {InMemoryWebApiModule} from "angular-in-memory-web-api";
 
 import { AppComponent } from './app.component';
-import {AppRoutingModule} from "./app-routing.module";
-import {InMemoryDataService} from "./in-memory-data.service";
+import { AppRoutingModule } from "./app-routing.module";
+import { InMemoryDataService } from "./in-memory-data.service";
 
 import './rxjs-extensions';
-import {TohModule} from "./toh/toh.module";
+import { TohModule } from "./toh/toh.module";
 //import {TohRoutingModule} from "./toh/toh-routing.module";
 
 
@@ -26,7 +26,6 @@ import {TohModule} from "./toh/toh.module";
     MaterialModule.forRoot(),
     TohModule,
     AppRoutingModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
