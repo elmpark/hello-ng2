@@ -19,10 +19,10 @@
       "mobile": false,
       "styles": [
         "styles.css",
-        "mdl-main.css",
-        "material.pink-blue.min.css"
+        "mdl-style.css",
+        "../node_modules/material-design-lite/material.css"
       ],
-      "scripts": [],
+      "scripts": ["../node_modules/material-design-lite/material.js"],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
