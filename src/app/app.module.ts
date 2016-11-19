@@ -11,6 +11,7 @@ import { InMemoryDataService } from "./in-memory-data.service";
 
 import './rxjs-extensions';
 import { TohModule } from "./toh/toh.module";
+import { AttrDirectiveModule } from "./attr-directive/attr-directive.module";
 //import {TohRoutingModule} from "./toh/toh-routing.module";
 
 
@@ -25,6 +26,7 @@ import { TohModule } from "./toh/toh.module";
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     MaterialModule.forRoot(),
     TohModule,
+    AttrDirectiveModule,
     AppRoutingModule
   ],
   providers: [],

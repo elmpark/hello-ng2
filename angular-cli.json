@@ -19,7 +19,8 @@
       "mobile": false,
       "styles": [
         "styles.css",
-        "material2-app-theme.scss"
+        "mdl-main.css",
+        "material.pink-blue.min.css"
       ],
       "scripts": [],
       "environments": {

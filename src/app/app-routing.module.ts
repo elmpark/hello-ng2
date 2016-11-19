@@ -7,10 +7,6 @@ const routes: Routes = [
     path: 'attr-directive',
     loadChildren: 'app/attr-directive/attr-directive.module#AttrDirectiveModule'
   }
-
-  // {path: 'dashboard', component: DashboardComponent},
-  // {path: 'detail/:id', component: HeroDetailComponent},
-  // {path: 'heroes', component: HeroesComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
