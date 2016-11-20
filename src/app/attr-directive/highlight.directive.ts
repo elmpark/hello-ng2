@@ -8,9 +8,11 @@ export class HighlightDirective {
   private _defaultColor = 'red';
   @Input('appHighlight') highlightColor: string;
 
-  constructor(private el: ElementRef, private renderer: Renderer) {
-    renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'red')
+  @Input() set defaultColor(colorName: string){
+    this._defaultColor = colorName || this._defaultColor;
   }
+
+  constructor(private el: ElementRef, private renderer: Renderer) {  }
   @HostListener('mouseenter') onMouseEnter() {
     this.highlight(this.highlightColor || this._defaultColor);
   }
