@@ -19,6 +19,11 @@ const routes: Routes = [
     path: 'structural-directive',
     loadChildren: 'app/structural-directive/structural-directive.module#StructuralDirectiveModule'
   },
+  {
+    path: 'pipes-demo',
+    loadChildren: 'app/pipes-demo/pipes-demo.module#PipesDemoModule'
+  },
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
