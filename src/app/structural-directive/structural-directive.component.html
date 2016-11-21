@@ -61,4 +61,9 @@
   </p>
 </template>
 <div class="section--separator"></div>
-
+<p *appUnless="condition">
+  condition is false and appUnless if true.
+</p>
+<p *appUnless="!condition">
+  condition is ture and appUnless is false.
+</p>
