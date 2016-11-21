@@ -1,29 +1,28 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<div class="mdl-demo mdl-color&#45;&#45;grey-100 mdl-color-text&#45;&#45;grey-700 mdl-base">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+      <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+      </div>
+      <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        <h3>{{title}}</h3>
+      </div>
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+        <a routerLink="toh" class="mdl-layout__tab mdl-button" routerLinkActive="is-active">Toh</a>
+        <a routerLink="attr-directive" class="mdl-layout__tab mdl-button" routerLinkActive="is-active">Attr
+          directive</a>
+        <a routerLink="security" class="mdl-layout__tab mdl-button" routerLinkActive="is-active">Security</a>
+        <a routerLink="unit-test" class="mdl-layout__tab mdl-button" routerLinkActive="is-active">Unit test</a>
+        <a routerLink="structural-directive" class="mdl-layout__tab mdl-button" routerLinkActive="is-active">Structural
+          directive</a>
 
-  <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
-    <div class="mdl-layout__header-row">
-      <!-- Add spacer, to align navigation to the right in desktop -->
-      <div class="android-header-spacer mdl-layout-spacer"></div>
-      <div
-        class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-          <i class="material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" id="search-field">
-        </div>
+
       </div>
-      <!-- Navigation -->
-      <div class="android-navigation-container">
-        <nav class="android-navigation mdl-navigation">
-          <a class="mdl-navigation__link mdl-typography--text-uppercase" routerLink="toh">Toh</a>
-          <a class="mdl-navigation__link mdl-typography--text-uppercase" routerLink="attr-directive">Attr directive</a>
-        </nav>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="mdl-layout__tab-panel is-active" id="overview">
+        <router-outlet></router-outlet>
       </div>
-    </div>
+    </main>
   </div>
-  <router-outlet></router-outlet>
 </div>
 
-<!--<a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/android-dot-com/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-color&#45;&#45;accent mdl-color-text&#45;&#45;accent-contrast">View Source</a>-->
-<!--<script src="$$hosted_libs_prefix$$/$$version$$/material.min.js"></script>-->

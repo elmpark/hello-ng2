@@ -1,0 +1,64 @@
+<h3>{{title}}</h3>
+<div *ngFor=" let hero of heroes">
+  {{hero}}
+</div>
+<div class="section--separator"></div>
+
+<div [ngSwitch]="status">
+  <template [ngSwitchCase]="'in-mission'">In Mission</template>
+  <template [ngSwitchCase]="'ready'">Ready</template>
+  <template ngSwitchDefault>unknown</template>
+</div>
+
+<div class="section--separator"></div>
+<p *ngIf="condition">
+  condition is true and ngIf is true.
+</p>
+<p *ngIf="!condition">
+  condition is false and ngIf is false.
+</p>
+<div class="section--separator"></div>
+
+<div><!-- Visibility -->
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="isVisible = !isVisible">show
+    | hide
+  </button>
+  <app-heavy-loader [style.display]="isVisible ? 'inline' : 'none'" [logs]="logs"></app-heavy-loader>
+</div>
+<div><!-- NgIf -->
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" (click)="condition = !condition">if |
+    !if
+  </button>
+  <app-heavy-loader *ngIf="condition" [logs]="logs"></app-heavy-loader>
+</div>
+<h4>heavy-loader log:</h4>
+<div *ngFor="let message of logs">{{message}}</div>
+
+<div class="section--separator"></div>
+<p>
+  Hip!
+</p>
+<template>
+  <p>
+    Hip!
+  </p>
+</template>
+<p>
+  Hooray!
+</p>
+
+<div class="section--separator"></div>
+<!-- Examples (A) and (B) are the same -->
+<!-- (A) *ngIf paragraph -->
+<p *ngIf="condition">
+  Our heroes are true!
+</p>
+
+<!-- (B) [ngIf] with template -->
+<template [ngIf]="condition">
+  <p>
+    Our heroes are true!
+  </p>
+</template>
+<div class="section--separator"></div>
+

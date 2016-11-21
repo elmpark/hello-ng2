@@ -12,7 +12,7 @@ export class HighlightDirective {
     this._defaultColor = colorName || this._defaultColor;
   }
 
-  constructor(private el: ElementRef, private renderer: Renderer) {  }
+  constructor(private el: ElementRef, private renderer: Renderer) { }
   @HostListener('mouseenter') onMouseEnter() {
     this.highlight(this.highlightColor || this._defaultColor);
   }
