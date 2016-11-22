@@ -1,0 +1,38 @@
+<h3>Pipes Demo.</h3>
+<div class="section--separator"></div>
+
+<p>The hero's birthday is {{birthday | date:format | uppercase}}</p>
+<button (click)="toggleFormat()" class="mdl-button mdl-js-button mdl-button--raised">
+  Toggle Format
+</button>
+<div class="section--separator"></div>
+
+<h4>Power Booster</h4>
+<p>Origin power 2, Super power boost: {{2 | exponentialStrength: 10}}</p>
+<div class="section--separator"></div>
+
+<h4>Power Boost Calculator</h4>
+<div class="mdl-textfield mdl-js-textfield">
+  <div>
+    Normal power:
+    <input class="mdl-textfield__input" type="text" [(ngModel)]="power">
+  </div>
+  <div>
+    Boost factor:
+    <input class="mdl-textfield__input" type="text" [(ngModel)]="factor">
+  </div>
+</div>
+<p>Super Hero Power: {{power | exponentialStrength: factor}}</p>
+<div class="section--separator"></div>
+
+<h3>Pipes and change detection.</h3>
+<div class="mdl-textfield mdl-js-textfield">
+  <input class="mdl-textfield__input" type="text" #box (keyup.enter)="addHero(box.value); box.value=''"
+  placeholder="hero name">
+</div>
+<div *ngFor="let hero of (heroes | flyingHeroes)">
+  {{hero.name}}
+</div>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="reset()">
+  Reset
+</button>
